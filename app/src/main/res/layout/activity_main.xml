@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        tools:ignore="MissingConstraints">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#339e5a"
+                android:textStyle="bold"
+                android:text="Latitude"
+                android:textSize="30sp" />
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#339e5a"
+                android:textStyle="bold"
+                android:text="Longitude"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="0.0"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="0.0"
+        android:textSize="25sp" />
+
+</LinearLayout>
+
+
+        <com.github.anastr.speedviewlib.ImageSpeedometer
+            android:id="@+id/imageSpeedometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:sv_image="@drawable/speedonewmeter"
+            android:layout_gravity="center"
+            app:sv_withTremble="false" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="15"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Duration"
+                android:textColor="#339e5a"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/signalStrength"
+                android:src="@drawable/signal0"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+
+                />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="0 : 00"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/textField"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@drawable/metrictbg"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/currentSpeed"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:text="0"
+                        android:textSize="60sp" />
+
+                    <TextView
+                        android:id="@+id/tripDistance"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:text="0"
+                        android:textSize="60sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/avgSpeed"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:text="0"
+                        android:textSize="60sp" />
+
+                    <TextView
+                        android:id="@+id/totalDistance"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:text="0"
+                        android:textSize="60sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textField"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:backgroundTint="@color/purple_500"
+                android:text="START"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
